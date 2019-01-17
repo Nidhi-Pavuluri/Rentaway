@@ -1,5 +1,5 @@
 {
-  "name": "react-demo",
+  "name": "rentaway",
   "version": "2.0.3",
   "description": "React Demo",
   "scripts": {
@@ -53,5 +53,13 @@
     ]
   },
   "main": "webpack.config.js",
-  "author": "Nidhi Pavuluri"
+  "author": "Nidhi Pavuluri",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nidhi-Pavuluri/Rentaway.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nidhi-Pavuluri/Rentaway/issues"
+  },
+  "homepage": "https://github.com/Nidhi-Pavuluri/Rentaway#readme"
 }
