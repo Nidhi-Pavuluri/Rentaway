@@ -15,7 +15,12 @@ class App extends React.Component{
 
    
    render(){
-      <Route exact path = "/search" component={Pages}/>
+      return (
+         <Router>
+            <Route exact path = "/search" component={Pages}/>
+         </Router>
+      );
+      
    }
 }
 
