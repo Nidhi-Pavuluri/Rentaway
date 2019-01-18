@@ -17,7 +17,12 @@ class App extends React.Component{
    render(){
       return (
          <Router>
-            <Route exact path = "/search" component={Pages}/>
+            <Switch>            
+               <Route exact path = "/search" component={Pages}/>
+               <Route exact path = "/homeSearch" component={HomeSearch}/>
+               <Redirect to = "/homeSearch" />
+            </Switch>
+
          </Router>
       );
       
