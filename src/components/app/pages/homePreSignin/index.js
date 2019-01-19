@@ -4,11 +4,12 @@ import React from "react";
 class HomePreSignin extends React.Component{
     render(){
         return (
-            // <div name="nav_bar">
-            <h3>Rent@away</h3> 
-            // <span>Signup</span>
-            // <span>Login</span>               
-            // </div>
+           
+            <span><b>Rent@away</b>
+            <span>Signup</span>
+            <span>Login</span>   
+            </span>            
+           
         );
     }
 

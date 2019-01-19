@@ -21,6 +21,7 @@ class App extends React.Component{
             <Switch>            
                <Route exact path = "/search" component={Pages}/>
                <Route exact path = "/homeSearch" component={HomeSearch}/>
+               <Route exact path = "/homePreSignin" component={HomePreSignin}/>
                <Redirect to = "/homePreSignin" component={HomePreSignin}/>
             </Switch>
 
