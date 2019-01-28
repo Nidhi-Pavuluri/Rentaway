@@ -1,13 +1,19 @@
 import React from "react";
 import HomePreSignin from "./homePreSignin";
+import { Router } from "react-router";
+import { createBrowserHistory as createHistory } from "history";
 
 class SearchBar extends React.Component{
-    state = {
-        toDashboard: false,
-    }
+   
+    constructor(props){
+        super(props)
+        this.handleSubmit = this.handleSubmit.bind(this)     
+        }
+    
+    history = createHistory(this.props);
     handleSubmit(event){
         event.preventDefault();
-        //this.history.push(`/homePreSignin`)
+        this.props.history.push(`/homePreSignin`)
 
     }
     render() {
