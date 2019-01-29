@@ -1,7 +1,8 @@
 import React from "react";
 //import App from "./Components/App";
 import SearchBar from "./searchBar";
-import HomePreSignin from "./homePreSignin"
+import HomePreSignin from "./homePreSignin";
+import LoginPage from "./signupLogin";
 
 import{
    BrowserRouter as Router,
@@ -20,6 +21,7 @@ class App extends React.Component{
             <Switch>            
                <Route exact path = "/searchBar" component={SearchBar}/>
                <Route exact path = "/homePreSignin" component={HomePreSignin}/>
+               <Route exact path = "/signupLogin" component={LoginPage}/>
                <Redirect to = "/homePreSignin" component={HomePreSignin}/>
             </Switch>
 
