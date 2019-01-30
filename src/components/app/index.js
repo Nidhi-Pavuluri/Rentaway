@@ -1,5 +1,5 @@
 import React from "react";
-//import App from "./Components/App";
+import Modall from "./modall";
 import HomeSearch from "./homeSearch";
 import SearchBar from "./searchBar";
 import HomePreSignin from "./homePreSignin";
@@ -23,6 +23,7 @@ class App extends React.Component{
                <Route exact path = "/searchBar" component={SearchBar}/>
                <Route exact path = "/homeSearch" component={HomeSearch}/>
                <Route exact path = "/homePreSignin" component={HomePreSignin}/>
+               <Route exact path = "/modall" component={Modall}/>
                {/* <Route exact path = "/signupLogin" component={LoginPage}/> */}
                <Redirect to = "/homePreSignin" component={HomePreSignin}/>
             </Switch>
