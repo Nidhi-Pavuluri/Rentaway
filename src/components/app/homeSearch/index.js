@@ -30,7 +30,11 @@ class HomeSearch extends React.Component {
                   <ControlLabel>Number of Adults:</ControlLabel>
                   <FormControl componentClass="select" placeholder="select">
                     <option value="select">select</option>
-                    <option value="other">...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                   </FormControl>
                 </FormGroup>
               </tr>
@@ -39,7 +43,11 @@ class HomeSearch extends React.Component {
                   <ControlLabel>Number of Children:</ControlLabel>
                   <FormControl componentClass="select" placeholder="select">
                     <option value="select">select</option>
-                    <option value="other">...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                   </FormControl>
                 </FormGroup>
               </tr>
