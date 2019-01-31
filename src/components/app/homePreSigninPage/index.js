@@ -6,7 +6,7 @@ import React from "react";
 import Image  from "../image";
 
 
-class HomePreSignin extends React.Component{
+class HomePreSigninPage extends React.Component{
     
     render(){
       return( 
@@ -18,4 +18,4 @@ class HomePreSignin extends React.Component{
   }
 
 
-export default HomePreSignin;
+export default HomePreSigninPage;

@@ -3,6 +3,9 @@ import { FormGroup, Form, FormControl, ControlLabel, PageHeader, Button, Table }
 //import DayPickerInput from 'react-day-picker';
 import './search.css'
 //import 'react-day-picker/lib/style.css';
+import CounterInput from 'react-bootstrap-counter';
+
+
 
 class HomeSearch extends React.Component {
 
@@ -26,32 +29,14 @@ class HomeSearch extends React.Component {
               </tr>
 
               <tr>
-                <FormGroup controlId="formControlsAdult" bsSize="large">
-                  <ControlLabel>Number of Adults:</ControlLabel>
-                  <FormControl componentClass="select" placeholder="select">
-                    <option value="select">select</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </FormControl>
-                </FormGroup>
+              <ControlLabel>Number of Adults</ControlLabel>
+              <CounterInput max={40} onChange={ (value) => { console.log(value) } }  />
               </tr>
               <tr>
-                <FormGroup controlId="formControlsChild" bsSize="large">
-                  <ControlLabel>Number of Children:</ControlLabel>
-                  <FormControl componentClass="select" placeholder="select">
-                    <option value="select">select</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                  </FormControl>
-                </FormGroup>
+              <ControlLabel>Number of Children</ControlLabel>
+              <CounterInput max={40} onChange={ (value) => { console.log(value) } }  />
               </tr>
-                
+              <br></br>  
               <tr><Button type="submit">Submit</Button></tr>
             </tbody>
           </Table>

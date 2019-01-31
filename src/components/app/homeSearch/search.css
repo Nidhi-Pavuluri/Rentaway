@@ -5,3 +5,10 @@
     margin-left: 15%;
     background-color:#4A90E2;
 }
+.counter-input .form-control {
+    width: 30%;
+}
+/* to style buttons use */
+.counter-input .input-group-addon {
+     width: 100%;
+}

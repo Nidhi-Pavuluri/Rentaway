@@ -40,7 +40,7 @@ class NavBar extends React.Component {
                                 Services</a>
                              }
                             id="service">
-                            <LinkContainer to='/homePreSignin'>
+                            <LinkContainer to='/homePreSigninPage'>
                                 <MenuItem eventKey={3.1}>Homes</MenuItem>
                                 </LinkContainer>
                                 <MenuItem eventKey={3.2}>Office Spaces</MenuItem>

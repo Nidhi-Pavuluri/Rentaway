@@ -2,7 +2,7 @@ import React from "react";
 //import App from "./Components/App";
 import HomeSearch from "./homeSearch";
 import SearchBar from "./searchBar";
-import HomePreSignin from "./homePreSignin";
+import HomePreSigninPage from "./homePreSigninPage";
 //import LoginPage from "./signupLogin";
 
 import{
@@ -22,9 +22,9 @@ class App extends React.Component{
             <Switch>            
                <Route exact path = "/searchBar" component={SearchBar}/>
                <Route exact path = "/homeSearch" component={HomeSearch}/>
-               <Route exact path = "/homePreSignin" component={HomePreSignin}/>
+               <Route exact path = "/homePreSigninPage" component={HomePreSigninPage}/>
                {/* <Route exact path = "/signupLogin" component={LoginPage}/> */}
-               <Redirect to = "/homePreSignin" component={HomePreSignin}/>
+               <Redirect to = "/homePreSigninPage" component={HomePreSigninPage}/>
             </Switch>
 
          </Router>
