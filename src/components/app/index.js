@@ -3,6 +3,7 @@ import Modall from "./modall";
 import HomeSearch from "./homeSearch";
 import SearchBar from "./searchBar";
 import HomePreSignin from "./homePreSignin";
+import HomeResults from "./homeResults";
 //import LoginPage from "./signupLogin";
 
 import{
@@ -11,6 +12,7 @@ import{
    Switch,
    Redirect
 } from "react-router-dom";
+
 
 
 class App extends React.Component{
@@ -24,6 +26,7 @@ class App extends React.Component{
                <Route exact path = "/homeSearch" component={HomeSearch}/>
                <Route exact path = "/homePreSignin" component={HomePreSignin}/>
                <Route exact path = "/modall" component={Modall}/>
+               <Route exact path = "/homeResults" component={HomeResults}/>
                {/* <Route exact path = "/signupLogin" component={LoginPage}/> */}
                <Redirect to = "/homePreSignin" component={HomePreSignin}/>
             </Switch>

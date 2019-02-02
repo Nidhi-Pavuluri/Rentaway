@@ -1,40 +1,57 @@
 import React from "react";
+ 
 
 
-
-class HomeResults extends React.Component{
-
-    state = {
-        id: '',
-        location:'',
-        dates: '',
-        team:''
+class HomeResults extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        error: null,
+        isLoaded: false,
+        items: []
+      };
     }
-
-    componentDidMount(){
-        let self = this;
-        fetchDetails(this.props.match.params.id)
-        .then(res=> res.json())
-        .then(function(data){
-            self.setState({
-                id: data[0],
-                name : data[1],
-                alias: data[2],
-                team : data[3]})
+  
+    componentDidMount() {
+      fetch("http://localhost:9000/homes")
+        .then(res => res.json())
+        .then(
+          (result) => {
+            this.setState({
+              isLoaded: true,
+              items: result.items
             });
-    }
-    
-    render(){
-        return(
-            <div>
-            <section>
-                <h3> View Details </h3>
-                <div> Name : {this.state.name} </div>
-                <div> Alias : {this.state.alias} </div>
-            </section>
-            </div>
+          },
+          // Note: it's important to handle errors here
+          // instead of a catch() block so that we don't swallow
+          // exceptions from actual bugs in components.
+          (error) => {
+            this.setState({
+              isLoaded: true,
+              error
+            });
+          }
         )
     }
-}
+  
+    render() {
+      const { error, isLoaded, items } = this.state;
+      if (error) {
+        return <div>Error: {error.message}</div>;
+      } else if (!isLoaded) {
+        return <div>Loading...</div>;
+      } else {
+        return (
+          <ul>
+            {items.map(item => (
+              <li key={item.name}>
+                {item.name} {item.location}
+              </li>
+            ))}
+          </ul>
+        );
+      }
+    }
+  }
 
-export default HomeResults;
+  export default HomeResults;
